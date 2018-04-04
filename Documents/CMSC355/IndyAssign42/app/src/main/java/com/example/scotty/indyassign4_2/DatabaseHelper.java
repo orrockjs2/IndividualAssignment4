@@ -15,7 +15,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_ANTONYM = "antonym";
     private SQLiteDatabase db;
 
-    private static final String TABLE_CREATE = "create table wordPairs (word string primary key not null , auto_increment , antonym not null)";
+    private static final String TABLE_CREATE = "create table wordPairs (word string not null , auto_increment , antonym not null)";
 
     DatabaseHelper(Context context) {
         super(context, DATABASE_NAME , null , DATABASE_VERSION);
@@ -56,13 +56,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 a = cursor.getString(0);
                 b = cursor.getString(1);
 
-
                 if(a.equals(word)){
                     b = cursor.getString(1);
                 }
                 else if(b.equals(word)){
                     a = cursor.getString(0);
                     b = a;
+                }
+                else{
+                    b = "not found";
                 }
             }while(cursor.moveToNext());
         }
