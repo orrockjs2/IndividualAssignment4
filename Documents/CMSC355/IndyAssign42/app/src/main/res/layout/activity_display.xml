@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".displayActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/WelcomeText"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:text="Enter Antonym"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <EditText
+            android:id="@+id/searchText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Word Here"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/enterVal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Values" />
+
+        <Button
+            android:id="@+id/findAnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find Antonym" />
+
+    </LinearLayout>
+</LinearLayout>
